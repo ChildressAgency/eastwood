@@ -1,0 +1,150 @@
+#masthead{
+  background-color: $dark-gray;
+  color: #fff;
+  text-transform: uppercase;
+
+  .masthead-contact{
+    padding-top:5px;
+    padding-bottom:5px;
+
+    a{
+      color:#fff;
+      font-weight: $font-weight-normal;
+      padding-top:5px;
+      padding-bottom:5px;
+        
+      &:hover,
+      &:focus{
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+
+    .call-today{
+      color: $brand-color;
+      font-weight: $font-weight-bold;
+
+      &:hover,
+      &:focus{
+        color: $brand-color;
+      }
+    }
+  }
+
+  .locations{
+    display:inline;
+
+    li{
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+      position:relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: 2px solid $brand-color;
+        border-radius: 50%;
+        right: -9px;
+        top:10px;
+      }
+
+      &:last-child::after{
+        border: none;
+      }
+    }
+  }
+
+  .search-link{
+    display: block;
+    background-color: $brand-color;
+    position:relative;
+    width:75px;
+    margin-left:auto;
+
+    &:hover,
+    &:focus{
+      background-color: $gray;
+      text-decoration: none;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      height: 23px;
+      width: 24px;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      background-image: url(images/sprites.png);
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+    }
+  }
+}
+
+#header-nav{
+  #navbar{
+    position:relative;
+  }
+
+  .mega-dropdown{
+    position:static;
+  }
+
+  .mega-menu{
+    width:100%;
+    border:none;
+    border-radius:0;
+    border-top:4px solid #688433;
+    background-color: #f2f2f2;
+
+    &.keep-open{
+      display:block;
+    }
+  }
+
+  .nav-link{
+    color:#000;
+    font-weight: $font-weight-normal;
+    text-transform:uppercase;
+    border-radius: 0;
+  }
+
+  .nav-pills{
+    padding-left:15px;
+    padding-right:15px;
+
+    .nav-link.active,
+    .show>.nav-link{
+      background-color: transparent;
+      font-weight: $font-weight-bold;
+      border-radius: 0;
+
+      &::after{
+        content: "\003e";
+        margin-left: 3px;
+      }
+    }
+
+    .nav-link:hover{
+      font-weight: $font-weight-bold;
+    }
+
+    #tab-customization{
+      border-top: 4px solid #b9b9b9;
+    }
+  }
+
+  #furniture-content{
+    border-left: 2px solid $brand-color;
+  }
+
+  .phone-numbers span{
+    display: block;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+}

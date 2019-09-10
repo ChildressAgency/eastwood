@@ -1,0 +1,21 @@
+body{
+  font-size: 16px;
+  color: #000;
+  font-family: $font-family-main;
+}
+
+a{
+  transition: all .3s ease;
+  color: $brand-color;
+  font-weight: $font-weight-bold;
+
+  &:hover,
+  &:focus{
+    color: $brand-color;
+    text-decoration: underline;
+  }
+}
+
+button:focus{
+  outline: none;
+}

@@ -8,7 +8,6 @@
   <meta http-equiv="cache-control" content="public">
   <meta http-equiv="cache-control" content="private">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,700i,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link href="../wp-theme-files/style.css" rel="stylesheet" />
@@ -19,10 +18,10 @@
 <body>
   <header id="header">
     <section id="masthead">
-      <div class="container">
+      <div class="container d-flex align-items-stretch">
         <div class="masthead-contact">
-          <span class="call-today">Call Today!</span>
-          <ul class="list-unstyled list-inline locations">
+          <a href="#" class="call-today">Call Today!</a>
+          <ul class="list-unstyled locations d-none d-lg-inline">
             <li>Kidron: <a href="tel:330-857-2009">330-857-2009</a></li>
             <li>Medina: <a href="tel:330-723-0014">330-723-0014</a></li>
             <li>Cleveland Heights: <a href="tel:216-303-9862">216-303-9862</a></li>
@@ -35,14 +34,14 @@
     <nav id="header-nav" class="navbar navbar-expand-lg">
       <div class="container">
         <a href="#" class="navbar-brand">
-          <img src="..wp-theme-files/images/logo.png" class="img-fluid" alt="Eastwood Furniture Logo" />
+          <img src="../wp-theme-files/images/logo.png" class="img-fluid" alt="Eastwood Furniture Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-bars"></i>
         </button>
         <div id="navbar" class="collapse navbar-collapse">
           <!-- https://mdbootstrap.com/docs/jquery/navigation/mega-menu/ -->
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a href="#" class="nav-link">About Us</a>
             </li>
@@ -56,11 +55,11 @@
                       <a href="#dining-room" id="tab-dining-room" class="nav-link" data-toggle="pill" role="tab" aria-controls="dining-room" aria-selected="false">Dining Room</a>
                       <a href="#kitchen" id="tab-kitchen" class="nav-link" data-toggle="pill" role="tab" aria-controls="kitchen" aria-selected="false">Kitchen</a>
                       <a href="#living-room" id="tab-living-room" class="nav-link" data-toggle="pill" role="tab" aria-controls="living-room" aria-selected="false">Living Room</a>
-                      <a href="#office" id="tab-office" class="nav-list" data-toggle="pill" role="tab" aria-controls="office" aria-selected="false">Office</a>
-                      <a href="#outdoor" id="tab-outdoor" class="nav-list" data-toggle="pill" role="tab" aria-controls="outdoor" aria-selected="false">Outdoor</a>
-                      <a href="#specialty" id="tab-specialty" class="nav-list" data-toggle="pill" role="tab" aria-controls="specialty" aria-selected="false">Specialty</a>
-                      <a href="#youth" id="tab-youth" class="nav-list" data-toggle="pill" role="tab" aria-controls="youth" aria-selected="false">Youth</a>
-                      <a href="#" id="tab-customization" class="nav-list">Customization</a>
+                      <a href="#office" id="tab-office" class="nav-link" data-toggle="pill" role="tab" aria-controls="office" aria-selected="false">Office</a>
+                      <a href="#outdoor" id="tab-outdoor" class="nav-link" data-toggle="pill" role="tab" aria-controls="outdoor" aria-selected="false">Outdoor</a>
+                      <a href="#specialty" id="tab-specialty" class="nav-link" data-toggle="pill" role="tab" aria-controls="specialty" aria-selected="false">Specialty</a>
+                      <a href="#youth" id="tab-youth" class="nav-link" data-toggle="pill" role="tab" aria-controls="youth" aria-selected="false">Youth</a>
+                      <a href="#" id="tab-customization" class="nav-link">Customization</a>
                     </div>
                   </div>
                   <div class="col-sm-8">
@@ -69,50 +68,21 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div id="" class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#bedroom-collections" id="tab-bedroom-collections" class="nav-link active" data-toggle="pill" role="tab" aria-controls="bedroom-collections" aria-selected="true">Collections</a> 
-                              <a href="#accessories" id="tab-accessories" class="nav-link" data-toggle="pill" role="tab" aria-controls="accessories" aria-selected="false">Accessories</a>
-                              <a href="#armoires" id="tab-armoires" class="nav-link" data-toggle="pill" role="tab" aria-controls="armoires" aria-selected="false">Armoires</a>
-                              <a href="#beds" id="tab-bed" class="nav-link" data-toggle="pill" role="tab" aria-controls="bed" aria-selected="false">Beds</a>
-                              <a href="#blanket-chests" id="tab-blanket-chests" class="nav-link" data-toggle="pill" role="tab" aria-controls="blanket-chests" aria-selected="false">Blanket Chests</a>
-                              <a href="#chests" id="tab-chests" class="nav-link" data-toggle="pill" role="tab" aria-controls="chests" aria-selected="false">Chests</a>
-                              <a href="#dressers" id="tab-dressers" class="nav-link" data-toggle="pill" role="tab" aria-controls="dressers" aria-selected="false">Dressers</a>
-                              <a href="#jewelry-armoires" id="tab-jewelry-armoires" class="nav-link" data-toggle="pill" role="tab" aria-controls="jewelry-armoires" aria-selected="false">Jewelry Armoires</a>
-                              <a href="#mirrors" id="tab-mirrors" class="nav-link" data-toggle="pill" role="tab" aria-controls="mirrors" aria-selected="false">Mirrors</a>
-                              <a href="#nightstands" id="tab-nightstands" class="nav-link" data-toggle="pill" role="tab" aria-controls="nightstands" aria-selected="false">Nightstands</a>
+                              <a href="#" id="tab-bedroom-collections" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-collections.jpg" data-menu_img_alt="Bedroom Furniture Collections">Collections</a> 
+                              <a href="#" id="tab-accessories" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images//bedroom/bedroom-furniture-accessories.jpg" data-menu_img_alt="">Accessories</a>
+                              <a href="#" id="tab-armoires" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-armoires.jpg" data-menu_img_alt="">Armoires</a>
+                              <a href="#" id="tab-bed" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-beds.jpg" data-menu_img_alt="">Beds</a>
+                              <a href="#" id="tab-blanket-chests" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-blanket-chests.jpg" data-menu_img_alt="">Blanket Chests</a>
+                              <a href="#" id="tab-chests" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-chests.jpg" data-menu_img_alt="">Chests</a>
+                              <a href="#" id="tab-dressers" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-dressers.jpg" data-menu_img_alt="">Dressers</a>
+                              <a href="#" id="tab-jewelry-armoires" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-jewelry-armoires.jpg" data-menu_img_alt="">Jewelry Armoires</a>
+                              <a href="#" id="tab-mirrors" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-mirrors.jpg" data-menu_img_alt="">Mirrors</a>
+                              <a href="#" id="tab-nightstands" class="nav-link" data-menu_img_target="menu-img-bedroom" data-menu_img="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-nightstands.jpg" data-menu_img_alt="">Nightstands</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div id="" class="tab-content furniture-sub-content">
-                              <div id="bedroom-collections" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-bedroom-collections">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-collections.jpg" class="img-fluid d-block mx-auto" alt="Bedroom Furniture Collections" />
-                              </div>
-                              <div id="accessories" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-accessories">
-                                <img src="../wp-theme-files/images/menu-images//bedroom/bedroom-furniture-accessories.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="armoires" class="tab-pane fad" role="tabpanel" aria-labelledby="tab-armoires">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-armoires.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="beds" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-beds">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-beds.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="blanket-chests" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-blanket-chests">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-blanket-chests.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="chests" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-chests">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-chests.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="dressers" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-dressers">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-dressers.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="jewelry-armoires" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-jewelry-armoires">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-jewelry-armoires.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="mirrors" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-mirrors">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-mirrors.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="nightstands" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-nightstands">
-                                <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-nightstands.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/bedroom/bedroom-furniture-collections.jpg" id="menu-img-bedroom" class="img-fluid d-block mx-auto" alt="Bedroom furniture Collections" />
                             </div>
                           </div>
                         </div>
@@ -122,54 +92,22 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#dining-room-collections" id="tab-dining-room-collections" class="nav-link active" data-toggle="pill" role="tab" aria-controls="dining-room-collections" aria-selected="true">Collections</a>
-                              <a href="#benches" id="tab-benches" class="nav-link" data-toggle="pill" role="tab" aria-controls="benches" aria-selected="false">Benches</a>
-                              <a href="#buffets" id="tab-buffets" class="nav-link" data-toggle="pill" role="tab" aria-controls="buffets" aria-selected="false">Buffets</a>
-                              <a href="#chairs" id="tab-chairs" class="nav-link" data-toggle="pill" role="tab" aria-controls="chairs" aria-selected="false">Chairs</a>
-                              <a href="#corner-cabinets" id="tab-corner-cabinets" class="nav-link" data-toggle="pill" role="tab" aria-controls="corner-cabinets" aria-selected="false">Corner Cabinets</a>
-                              <a href="#curio-cabinets" id="tab-curio-cabinets" class="nav-link" data-toggle="pill" role="tab" aria-controls="curio-cabinets" aria-selected="false">Curio Cabinets</a>
-                              <a href="#hutches" id="tab-hutches" class="nav-link" data-toggle="pill" role="tab" aria-controls="hutches" aria-selected="false">Hutches</a>
-                              <a href="#servers" id="tab-servers" class="nav-link" data-toggle="pill" role="tab" aria-controls="servers" aria-selected="false">Servers</a>
-                              <a href="#sideboards" id="tab-sideboards" class="nav-link" data-toggle="pill" role="tab" aria-controls="sideboards" aria-selected="false">Sideboards</a>
-                              <a href="#tables" id="tab-tables" class="nav-link" data-toggle="pill" role="tab" aria-controls="tables" aria-selected="false">Tables</a>
-                              <a href="#wine-cabinets" id="tab-wine-cabinets" class="nav-link" data-toggle="pill" role="tab" aria-controls="tables" aria-selected="false">Wine Cabinets</a>
+                              <a href="#dining-room-collections" id="tab-dining-room-collections" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-collections.jpg" data-menu_img_alt="">Collections</a>
+                              <a href="#benches" id="tab-benches" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-benches.jpg" data-menu_img_alt="">Benches</a>
+                              <a href="#buffets" id="tab-buffets" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-buffets.jpg" data-menu_img_alt="">Buffets</a>
+                              <a href="#chairs" id="tab-chairs" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-chairs.jpg" data-menu_img_alt="">Chairs</a>
+                              <a href="#corner-cabinets" id="tab-corner-cabinets" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-corner-cabinets.jpg" data-menu_img_alt="">Corner Cabinets</a>
+                              <a href="#curio-cabinets" id="tab-curio-cabinets" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-curio-cabinets.jpg" data-menu_img_alt="">Curio Cabinets</a>
+                              <a href="#hutches" id="tab-hutches" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-hutches.jpg" data-menu_img_alt="">Hutches</a>
+                              <a href="#servers" id="tab-servers" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-servers.jpg" data-menu_img_alt="">Servers</a>
+                              <a href="#sideboards" id="tab-sideboards" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-sideboards.jpg" data-menu_img_alt="">Sideboards</a>
+                              <a href="#tables" id="tab-tables" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-tables.jpg" data-menu_img_alt="">Tables</a>
+                              <a href="#wine-cabinets" id="tab-wine-cabinets" class="nav-link" data-menu_img_target="menu-img-dining-room" data-menu_img="../wp-theme-files/images/menu-images/dining-room/dining-furniture-wine-cabinets.jpg" data-menu_img_alt="">Wine Cabinets</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="dining-room-collections" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-dining-room-collections">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-collections.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="benches" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-benches">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-benches.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="buffets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-buffets">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-buffets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="chairs" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-chairs">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-chairs.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="corner-cabinets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-corner-cabinets">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-corner-cabinets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="curio-cabinets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-curio-cabinets">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-curio-cabinets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="hutches" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-hutches">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-hutches.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="servers" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-servers">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-servers.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="sideboards" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-sideboards">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-sideboards.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="tables" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-tables">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-tables.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="wine-cabinets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-wine-cabinets">
-                                <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-wine-cabinets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/dining-room/dining-furniture-collections.jpg" id="menu-img-dining-room" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -179,30 +117,16 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#islands" id="tab-islands" class="nav-link active" data-toggle="pill" role="tab" aria-controls="islands" aria-selected="true">Islands</a>
-                              <a href="#jelly-cabinets" id="tab-jelly-cabinets" class="nav-link" data-toggle="pill" role="tab" aria-controls="jelly-cabinets" aria-selected="false">Jelly Cabinets</a>
-                              <a href="#nooks" id="tab-nooks" class="nav-link" data-toggle="pills" role="tab" aria-controls="nook" aria-selected="false">Nooks</a>
-                              <a href="#pie-safes" id="tab-pie-safes" class="nav-link" data-toggle="pills" role="tab" aria-controls="pie-safes" aria-selected="false">Pie Safes</a>
-                              <a href="#storage" id="tab-storage" class="nav-link" data-toggle="pills" role="tab" aria-controls="storage" aria-selected="false">Storage</a>
+                              <a href="#islands" id="tab-islands" class="nav-link" data-menu_img_target="menu-img-kitchen" data-menu_img="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-islands.jpg" data-menu_img_alt="">Islands</a>
+                              <a href="#jelly-cabinets" id="tab-jelly-cabinets" class="nav-link" data-menu_img_target="menu-img-kitchen" data-menu_img="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-jelly-cabinets.jpg" data-menu_img_alt="">Jelly Cabinets</a>
+                              <a href="#nooks" id="tab-nooks" class="nav-link" data-menu_img_target="menu-img-kitchen" data-menu_img="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-nooks.jpg" data-menu_img_alt="">Nooks</a>
+                              <a href="#pie-safes" id="tab-pie-safes" class="nav-link" data-menu_img_target="menu-img-kitchen" data-menu_img="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-pie-safes.jpg" data-menu_img_alt="">Pie Safes</a>
+                              <a href="#storage" id="tab-storage" class="nav-link" data-menu_img_target="menu-img-kitchen" data-menu_img="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-storage.jpg" data-menu_img_alt="">Storage</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="islands" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-islands">
-                                <img src="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-islands.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="jelly-cabinets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-jelly-cabinets">
-                                <img src="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-jelly-cabinets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="nooks" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-nooks">
-                                <img src="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-nooks.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="pie-safes" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-pie-safes">
-                                <img src="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-pie-safes.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="storage" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-storage">
-                                <img src="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-storage.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/kitchen/kitchen-furniture-islands.jpg" id="menu-img-kitchen" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -212,62 +136,24 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#living-room-collections" id="tab-living-room-collections" class="nav-link active" data-toggle="pill" role="tab" aria-controls="living-room-collections" aria-selected="true">Collections</a>
-                              <a href="#living-room-accessories" id="tab-living-room-accessories" class="nav-link" data-toggle="pill" role="tab" aria-controls="living-room-accessories" aria-selected="false">Accessories</a>
-                              <a href="#bookcases" id="tab-bookcases" class="nav-link" data-toggle="pill" role="tab" aria-controls="bookcases" aria-selected="false">Bookcases</a>
-                              <a href="#living-room-chairs" id="tab-living-room-chairs" class="nav-link" data-toggle="pill" role="tab" aria-controls="living-room-chairs" aria-selected="false">Chairs</a>
-                              <a href="#coffee-tables" id="tab-coffee-tables" class="nav-link" data-toggle="pill" role="tab" aria-controls="coffee-tables" aria-selected="false">Coffee Tables</a>
-                              <a href="#end-tables" id="tab-end-tables" class="nav-link" data-toggle="pill" role="tab" aria-controls="end-tables" aria-selected="false">End Tables</a>
-                              <a href="#love-seats" id="tab-love-seats" class="nav-link" data-toggle="pill" role="tab" aria-controls="love-seats" aria-selected="false">Love Seats</a>
-                              <a href="#occasional-tables" id="tab-occasional-tables" class="nav-link" data-toggle="pill" role="tab" aria-controls="occasional-tables" aria-selected="false">Occasional Tables</a>
-                              <a href="#footstools" id="tab-footstools" class="nav-link" data-toggle="pill" role="tab" aria-controls="footstools" aria-selected="false">Footstools</a>
-                              <a href="#sofas" id="tab-sofas" class="nav-link" data-toggle="pill" role="tab" aria-controls="sofas" aria-selected="false">Sofas</a>
-                              <a href="#tv-stands-corner" id="tab-tv-stands-corner" class="nav-link" data-toggle="pill" role="tab" aria-controls="tv-stands-corner" aria-selected="false">TV Stands - Corner</a>
-                              <a href="#tv-stands-wall" id="tab-tv-stands-wall" class="nav-link" data-toggle="pill" role="tab" aria-controls="tv-stands-wall" aria-selected="false">TV Stands - Wall</a>
-                              <a href="#wall-units" id="tab-wall-units" class="nav-link" data-toggle="pill" role="tab" aria-controls="wall-units" aria-selected="false">Wall Units</a>
+                              <a href="#living-room-collections" id="tab-living-room-collections" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-collections.jpg" data-menu_img_alt="">Collections</a>
+                              <a href="#living-room-accessories" id="tab-living-room-accessories" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-accessories.jpg" data-menu_img_alt="">Accessories</a>
+                              <a href="#bookcases" id="tab-bookcases" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-bookcases.jpg" data-menu_img_alt="">Bookcases</a>
+                              <a href="#living-room-chairs" id="tab-living-room-chairs" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-chairs.jpg" data-menu_img_alt="">Chairs</a>
+                              <a href="#coffee-tables" id="tab-coffee-tables" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-coffee-tables.jpg" data-menu_img_alt="">Coffee Tables</a>
+                              <a href="#end-tables" id="tab-end-tables" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-end-tables.jpg" data-menu_img_alt="">End Tables</a>
+                              <a href="#love-seats" id="tab-love-seats" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-love-seats.jpg" data-menu_img_alt="">Love Seats</a>
+                              <a href="#occasional-tables" id="tab-occasional-tables" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-occasional-tables.jpg" data-menu_img_alt="">Occasional Tables</a>
+                              <a href="#footstools" id="tab-footstools" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-ottoman.jpg" data-menu_img_alt="">Footstools</a>
+                              <a href="#sofas" id="tab-sofas" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/living-room-furniture-sofa.jpg" data-menu_img_alt="">Sofas</a>
+                              <a href="#tv-stands-corner" id="tab-tv-stands-corner" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/entertainment-furniture-tv-stands-corner.jpg" data-menu_img_alt="">TV Stands - Corner</a>
+                              <a href="#tv-stands-wall" id="tab-tv-stands-wall" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/entertainment-furniture-tv-stands-wall.jpg" data-menu_img_alt="">TV Stands - Wall</a>
+                              <a href="#wall-units" id="tab-wall-units" class="nav-link" data-menu_img_target="menu-img-living-room" data-menu_img="../wp-theme-files/images/menu-images/living-room/entertainment-furniture-wall-units.jpg" data-menu_img_alt="">Wall Units</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="living-room-collections" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-living-room-collections">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-collections.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="living-room-accessories" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-living-room-accessories">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-accessories.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="bookcases" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-bookcases">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-bookcases.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="living-room-chairs" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-living-room-chairs">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-chairs.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="coffee-tables" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-coffee-tables">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-coffee-tables.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="end-tables" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-end-tables">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-end-tables.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="love-seats" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-love-seats">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-love-seats.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="occasional-tables" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-occasional-tables">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-occasional-tables.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="footstools" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-footstools">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-ottoman.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="sofas" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-sofas">
-                                <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-sofa.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="tv-stands-corner" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-tv-stands-corner">
-                                <img src="../wp-theme-files/images/menu-images/living-room/entertainment-furniture-tv-stands-corner.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="tv-stands-wall" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-tv-stands-wall">
-                                <img src="../wp-theme-files/images/menu-images/living-room/entertainment-furniture-tv-stands-wall.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="wall-units" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-wall-units">
-                                <img src="../wp-theme-files/images/menu-images/living-room/entertainment-furniture-wall-units.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/living-room/living-room-furniture-collections.jpg" id="menu-img-living-room" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -277,46 +163,20 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#office-collections" id="tab-office-collections" class="nav-link active" data-toggle="pill" role="tab" aria-controls="office-collections" aria-selected="true">Collections</a>
-                              <a href="#office-accessories" id="tab-office-accessories" class="nav-link" data-toggle="pill" role="tab" aria-controls="office-accessories" aria-selected="false">Accessories</a>
-                              <a href="#office-bookcases" id="tab-office-bookcases" class="nav-link" data-toggle="pill" role="tab" aria-controls="office-bookcases" aria-selected="false">Bookcases</a>
-                              <a href="#office-chairs" id="tab-office-chairs" class="nav-link" data-toggle="pill" role="tab" aria-controls="office-chairs" aria-selected="false">Chairs</a>
-                              <a href="#credenzas" id="tab-credenzas" class="nav-link" data-toggle="pill" role="tab" aria-controls="credenzas" aria-selected="false">Credenzas</a>
-                              <a href="#desks" id="tab-desks" class="nav-link" data-toggle="pill" role="tab" aria-controls="desks" aria-selected="false">Desks</a>
-                              <a href="#file-cabinets" id="tab-file-cabinets" class="nav-link" data-toggle="pill" role="tab" aria-controls="file-cabinets" aria-selected="false">File Cabinets</a>
-                              <a href="#office-hutches" id="tab-office-hutches" class="nav-link" data-toggle="pill" role="tab" aria-controls="office-hutches" aria-selected="false">Hutches</a>
-                              <a href="#office-tables" id="tab-office-tables" class="nav-link" data-toggle="pill" role="tab" aria-controls="office-tables" aria-selected="false">Tables</a>
+                              <a href="#office-collections" id="tab-office-collections" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-collections.jpg" data-menu_img_alt="">Collections</a>
+                              <a href="#office-accessories" id="tab-office-accessories" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-accessories.jpg" data-menu_img_alt="">Accessories</a>
+                              <a href="#office-bookcases" id="tab-office-bookcases" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-bookshelves.jpg" data-menu_img_alt="">Bookcases</a>
+                              <a href="#office-chairs" id="tab-office-chairs" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-chairs.jpg" data-menu_img_alt="">Chairs</a>
+                              <a href="#credenzas" id="tab-credenzas" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-credenzas.jpg" data-menu_img_alt="">Credenzas</a>
+                              <a href="#desks" id="tab-desks" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-desks.jpg" data-menu_img_alt="">Desks</a>
+                              <a href="#file-cabinets" id="tab-file-cabinets" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-file-cabinets.jpg" data-menu_img_alt="">File Cabinets</a>
+                              <a href="#office-hutches" id="tab-office-hutches" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-hutches.jpg" data-menu_img_alt="">Hutches</a>
+                              <a href="#office-tables" id="tab-office-tables" class="nav-link" data-menu_img_target="menu-img-office" data-menu_img="../wp-theme-files/images/menu-images/office/office-furniture-tables.jpg" data-menu_img_alt="">Tables</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="office-collections" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-office-collections">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-collections.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="office-accessories" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-office-accessories">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-accessories.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="office-bookcases" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-office-bookcases">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-bookshelves.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="office-chairs" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-office-chairs">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-chairs.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="credenzas" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-credenzas">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-credenzas.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="desks" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-desks">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-desks.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="file-cabinets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-file-cabinets">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-file-cabinets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="office-hutches" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-office-hutches">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-hutches.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="office-tables" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-office-tables">
-                                <img src="../wp-theme-files/images/menu-images/office/office-furniture-tables.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/office/office-furniture-collections.jpg" id="menu-img-office" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -326,30 +186,16 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#outdoor-accessories" id="tab-outdoor-accessories" class="nav-link active" data-toggle="pill" role="tab" aria-controls="outdoor-accessories" aria-selected="true">Accessories</a>
-                              <a href="#gliders-swings" id="tab-gliders-swings" class="nav-link" data-toggle="pill" role="tab" aria-controls="gliders-swings" aria-selected="false">Gliders & Swings</a>
-                              <a href="#seating" id="tab-seating" class="nav-link" data-toggle="pill" role="tab" aria-controls="seating" aria-selected="false">Seating</a>
-                              <a href="#table-chair-sets" id="tab-table-chair-sets" class="nav-link" data-toggle="pill" role="tab" aria-controls="table-chair-sets" aria-selected="false">Table & Chair Sets</a>
-                              <a href="#outdoor-tables" id="tab-outdoor-tables" class="nav-link" data-toggle="pill" role="tab" aria-controls="outdoor-tables" aria-selected="false">Tables</a>
+                              <a href="#outdoor-accessories" id="tab-outdoor-accessories" class="nav-link" data-menu_img_target="menu-img-outdoor" data-menu_img="../wp-theme-files/images/menu-images/outdoor/GlidingOttoman89568-x300.jpg" data-menu_img_alt="">Accessories</a>
+                              <a href="#gliders-swings" id="tab-gliders-swings" class="nav-link" data-menu_img_target="menu-img-outdoor" data-menu_img="../wp-theme-files/images/menu-images/outdoor/AFrame89492-x300.jpg" data-menu_img_alt="">Gliders & Swings</a>
+                              <a href="#seating" id="tab-seating" class="nav-link" data-menu_img_target="menu-img-outdoor" data-menu_img="../wp-theme-files/images/menu-images/outdoor/AdirondackRocker89484-x300.jpg" data-menu_img_alt="">Seating</a>
+                              <a href="#table-chair-sets" id="tab-table-chair-sets" class="nav-link" data-menu_img_target="menu-img-outdoor" data-menu_img="../wp-theme-files/images/menu-images/outdoor/33InchSquareBarTablewith20InchBarChairs89537-x300.jpg" data-menu_img_alt="">Table & Chair Sets</a>
+                              <a href="#outdoor-tables" id="tab-outdoor-tables" class="nav-link" data-menu_img_target="menu-img-outdoor" data-menu_img="../wp-theme-files/images/menu-images/outdoor/CoffeeTable89543-x300.jpg" data-menu_img_alt="">Tables</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="outdoor-accessories" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-outdoor-accessories">
-                                <img src="../wp-theme-files/images/menu-images/outdoor/GlidingOttoman89568-x300.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="gliders-swings" class="tab-pane fade" aria-labelledby="tab-gliders-swings">
-                                <img src="../wp-theme-files/images/menu-images/outdoor/AFrame89492-x300.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="seating" class="tab-pane fade" aria-labelledby="tab-seating">
-                                <img src="../wp-theme-files/images/menu-images/outdoor/AdirondackRocker89484-x300.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="table-chair-sets" class="tab-pane fade" aria-labelledby="tab-table-chair-sets">
-                                <img src="../wp-theme-files/images/menu-images/outdoor/33InchSquareBarTablewith20InchBarChairs89537-x300.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="outdoor-tables" class="tab-pane fade" aria-labelledby="tab-outdoor-tables">
-                                <img src="../wp-theme-files/images/menu-images/outdoor/CoffeeTable89543-x300.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/outdoor/GlidingOttoman89568-x300.jpg" id="menu-img-outdoor" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -359,22 +205,14 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#foyer-furniture" id="tab-foyer-furniture" class="nav-link active" data-toggle="pill" role="tab" aria-controls="foyer-furniture" aria-selected="true">Foyer Furniture</a>
-                              <a href="#gun-cabinets" id="tab-gun-cabinets" class="nav-link" data-toggle="pill" role="tab" aria-controls="gun-cabinets" aria-selected="false">Gun Cabinets</a>
-                              <a href="#quilt-holders" id="tab-quilt-holders" class="nav-link" data-toggle="pill" role="tab" aria-controls="quilt-holders" aria-selected="false">Quilt Holders</a>
+                              <a href="#foyer-furniture" id="tab-foyer-furniture" class="nav-link" data-menu_img_target="menu-img-specialty" data-menu_img="../wp-theme-files/images/menu-images/specialty/specialty-furniture-foyer.jpg" data-menu_img_alt="">Foyer Furniture</a>
+                              <a href="#gun-cabinets" id="tab-gun-cabinets" class="nav-link" data-menu_img_target="menu-img-specialty" data-menu_img="../wp-theme-files/images/menu-images/specialty/specialty-furniture-gun-cabinets.jpg" data-menu_img_alt="">Gun Cabinets</a>
+                              <a href="#quilt-holders" id="tab-quilt-holders" class="nav-link" data-menu_img_target="menu-img-specialty" data-menu_img="../wp-theme-files/images/menu-images/specialty/specialty-furniture-quilt-holders.jpg" data-menu_img_alt="">Quilt Holders</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="foyer-furniture" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-foyer-furniture">
-                                <img src="../wp-theme-files/images/menu-images/specialty/specialty-furniture-foyer.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="gun-cabinets" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-gun-cabinets">
-                                <img src="../wp-theme-files/images/menu-images/specialty/specialty-furniture-gun-cabinets.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="quilt-holders" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-quilt-holders">
-                                <img src="../wp-theme-files/images/menu-images/specialty/specialty-furniture-quilt-holders.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/specialty/specialty-furniture-foyer.jpg" id="menu-img-specialty" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -384,42 +222,19 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="nav flex-column nav-pills mega-sub-nav" role="tablist">
-                              <a href="#youth-beds" id="tab-youth-beds" class="nav-link active" data-toggle="pill" role="tab" aria-controls="youth-beds" aria-selected="true">Beds</a>
-                              <a href="#youth-chairs" id="tab-youth-chairs" class="nav-link" data-toggle="pill" role="tab" aria-controls="youth-chairs" aria-selected="false">Chairs</a>
-                              <a href="#youth-chests" is="tab-youth-chests" class="nav-link" data-toggle="pill" role="tab" aria-controls="youth-chests" aria-selected="false">Chests</a>
-                              <a href="#cribs" id="tab-cribs" class="nav-link" data-toggle="pill" role="tab" aria-controls="crib" aria-selected="false">Cribs</a>
-                              <a href="#youth-dressers" id="tab-youth-dressers" data-toggle="pill" role="tab" aria-controls="youth-dressers" aria-selected="false">Dressers</a>
-                              <a href="#youth-nightstands" id="tab-youth-nightstands" data-toggle="pill" role="tab" aria-controls="youth-nightstands" aria-selected="false">Nightstands</a>
-                              <a href="#rockers" id="tab-rockers" data-toggle="pill" role="tab" aria-controls="rockers" aria-selected="false">Rockers</a>
-                              <a href="#toy-boxes" id="tab-toy-boxes" data-toggle="pill" role="tab" aria-controls="toy-boxes" aria-selected="false">Toy Boxes</a>
+                              <a href="#youth-beds" id="tab-youth-beds" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-beds.jpg" data-menu_img_alt="">Beds</a>
+                              <a href="#youth-chairs" id="tab-youth-chairs" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-chairs.jpg" data-menu_img_alt="">Chairs</a>
+                              <a href="#youth-chests" is="tab-youth-chests" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-chests.jpg" data-menu_img_alt="">Chests</a>
+                              <a href="#cribs" id="tab-cribs" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-convertibles.jpg" data-menu_img_alt="">Cribs</a>
+                              <a href="#youth-dressers" id="tab-youth-dressers" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-dressers.jpg" data-menu_img_alt="">Dressers</a>
+                              <a href="#youth-nightstands" id="tab-youth-nightstands" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-nightstands.jpg" data-menu_img_alt="">Nightstands</a>
+                              <a href="#rockers" id="tab-rockers" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-rockers.jpg" data-menu_img_alt="">Rockers</a>
+                              <a href="#toy-boxes" id="tab-toy-boxes" class="nav-link" data-menu_img_target="menu-img-youth" data-menu_img="../wp-theme-files/images/menu-images/youth/youth-furniture-toy-boxes.jpg" data-menu_img_alt="">Toy Boxes</a>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="tab-content furniture-sub-content">
-                              <div id="youth-beds" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-youth-beds">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-beds.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="youth-chairs" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-youth-chairs">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-chairs.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="youth-chests" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-youth-chests">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-chests.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="cribs" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-cribs">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-convertibles.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="youth-dressers" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-youth-dressers">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-dressers.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="youth-nightstands" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-youth-nightstands">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-nightstands.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="rockers" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-rockers">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-rockers.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
-                              <div id="toy-boxes" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-toy-boxes">
-                                <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-toy-boxes.jpg" class="img-fluid d-block mx-auto" alt="" />
-                              </div>
+                              <img src="../wp-theme-files/images/menu-images/youth/youth-furniture-beds.jpg" id="menu-img-youth" class="img-fluid d-block mx-auto" alt="" />
                             </div>
                           </div>
                         </div>
@@ -434,6 +249,12 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Contact Us</a>
+            </li>
+            <li class="dropdown-divider d-block d-lg-none"></li>
+            <li class="phone-numbers d-block d-lg-none">
+              <span>Kidron: <a href="tel:330-857-2009">330-857-2009</a></span>
+              <span>Medina: <a href="tel:330-723-0014">330-723-0014</a></span>
+              <span>Cleveland Heights: <a href="tel:216-303-9862">216-303-9862</a></span>
             </li>
           </ul>
         </div>
