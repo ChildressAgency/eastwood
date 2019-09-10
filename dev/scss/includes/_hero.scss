@@ -1,0 +1,36 @@
+#hero{
+  .carousel-item{
+    position:relative;
+  }
+
+  .hero-caption{
+    position:relative;
+    z-index: 3;
+    color: #fff;
+    margin-top:60px;
+    margin-bottom:100px;
+
+    @include media-breakpoint-up(lg){
+      max-width:50%;
+    }
+
+    h2{
+      font-size: 40px;
+      font-weight: $font-weight-bold;
+      margin-bottom:25px;
+    }
+    .hero-subtitle{
+      font-size: 20px;
+      font-weight: $font-weight-medium;
+      text-transform: uppercase;
+      margin-bottom:40px;
+    }
+  }
+
+  .carousel-indicators li{
+    height:25px;
+    width:25px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

@@ -16,6 +16,34 @@ a{
   }
 }
 
+.btn-main{
+  display: inline-block;
+  color: #fff;
+  font-size: 22px;
+  font-weight: $font-weight-bold;
+  font-style: italic;
+  background-color: $brand-color;
+  border:1px solid $brand-color-alt;
+  padding: 10px 40px;
+
+  &:hover,
+  &:focus{
+    color: #fff;
+    background-color: $brand-color-alt;
+    text-decoration:none;
+  }
+}
+
 button:focus{
   outline: none;
+}
+
+.light-overlay{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index: 1;
+  background-color: rgba(0,0,0,.5);
 }
