@@ -42,6 +42,12 @@ jQuery(document).ready(function($){
       $animationElement.css('left', scroll + '%');
     }
   }
+
+  $('#cat-list .nav-link').on('shown.bs.tab', function(e){
+    $newImage = $(this).data('bg_image');
+
+    $('#hp-explore').find('.image-side').css('background-image', 'url(' + $newImage + ')');
+  });
 }); //jQuery
 
 

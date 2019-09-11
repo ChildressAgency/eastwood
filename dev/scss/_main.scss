@@ -132,20 +132,3 @@ button:focus{
     z-index: 1;
   }
 }
-
-#planer-animation{
-  position: relative;
-  background-image: url(images/woodblock.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height:80px;
-  margin-top:300px;
-
-  img{
-    position:absolute;
-    bottom: 76px;
-    width: 25%;
-  }
-}
