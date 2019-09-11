@@ -23,7 +23,27 @@ jQuery(document).ready(function($){
   });
 
   $('#hero-carousel.carousel-heights .carousel-inner .carousel-item').carouselHeights();
+
+  var $animationElement = $('#planer-animation img');
+  var $window = $(window);
+  $window.on('scroll resize', isInViewport);
+
+  function isInViewport(){
+    var viewportHeight = $window.height();
+    var viewportTopPosition = $window.scrollTop();
+    var viewportBottomPosition = (viewportTopPosition + viewportHeight);
+
+    var elementHeight = $animationElement.outerHeight();
+    var elementTopPosition = $animationElement.offset().top;
+    var elementBottomPosition = (elementTopPosition + elementHeight);
+
+    if((elementBottomPosition >= viewportTopPosition) && (elementTopPosition <= viewportBottomPosition)){
+      var scroll = (viewportTopPosition / viewportHeight) * 100;
+      $animationElement.css('left', scroll + '%');
+    }
+  }
 }); //jQuery
+
 
 /**
  * Normalize Carousel Heights

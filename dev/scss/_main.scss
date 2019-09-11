@@ -47,3 +47,105 @@ button:focus{
   z-index: 1;
   background-color: rgba(0,0,0,.5);
 }
+
+.article-header{
+  margin-bottom:25px;
+
+  .icon-header{
+    font-size: 30px;
+    color: $gray;
+    position:relative;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+
+    &::before{
+      content:"";
+      display: block;
+      margin-bottom: 25px;
+      background-image: url(images/sprites.png);
+      background-repeat: no-repeat;
+    }
+
+    &.icon-chisel::before{
+      background-position: -30px 0px;
+      height: 28px;
+      width: 330px;
+    }
+    &.icon-handsaw::before{
+      background-position: 0px -34px;
+      height: 68px;
+      width: 323px;
+    }
+    &.icon-planer::before{
+      background-position: 0 -109px;
+      height: 142px;
+      width: 203px;
+    }
+    &.icon-ohio::before{
+      background-position: -333px -34px;
+      height: 169px;
+      width: 153px;
+    }
+    &.icon-two-hand-saw::before{
+      background-position: 0px -259px;
+      height: 72px;
+      width: 344px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .subtitle{
+    font-size:22px;
+    text-transform: uppercase;
+    color: $brand-color;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.img-stylized-background{
+  position:relative;
+
+  img{
+    position: relative;
+    z-index: 9;
+    margin-top: 20px;
+  }
+
+  .border-square{
+    position: absolute;
+    height: 75%;
+    width: 60%;
+    bottom: -5%;
+    left: 13%;
+    border: 10px solid $brand-color;
+    z-index:3;
+  }
+
+  .filled-square{
+    position: absolute;
+    height: 86%;
+    width: 49%;
+    top: -7%;
+    right: 13%;
+    background-color: $gray;
+    z-index: 1;
+  }
+}
+
+#planer-animation{
+  position: relative;
+  background-image: url(images/woodblock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height:80px;
+  margin-top:300px;
+
+  img{
+    position:absolute;
+    bottom: 76px;
+    width: 25%;
+  }
+}
