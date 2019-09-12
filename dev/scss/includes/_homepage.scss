@@ -14,6 +14,9 @@
     width: 25%;
   }
 }
+.overflow-wrapper{
+  overflow:hidden;
+}
 
 #hp-explore{
   .text-side{
@@ -134,5 +137,16 @@
         }
       }
     }
+  }
+}
+
+#customization{
+  .wood-species img{
+    width: 230px;
+    flex-grow: 1;
+  }
+
+  article{
+    padding:40px 15px 15px;
   }
 }

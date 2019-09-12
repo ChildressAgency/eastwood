@@ -1,0 +1,150 @@
+#hp-locations{
+  padding-top: 40px;
+  padding-bottom:60px;
+
+  .location-bg-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position:relative;
+    max-width: 330px;
+    height: 230px;
+    margin: 25px auto 0px;
+
+    a{
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      text-align: center;
+      width:100%;
+
+      &:hover,
+      &:focus{
+        color: $brand-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#testimonials{
+  background-color: $gray;
+  color: #fff;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom:25px;
+
+  .carousel-indicators{
+    bottom: -10px;
+
+    li{
+      height: 25px;
+      width: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .testimonial{
+    max-width:775px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    font-style: italic;
+
+    cite{
+      font-size: 30px;
+      color: $brand-color;
+      font-weight: $font-weight-normal;
+      font-style: normal;
+    }
+  }
+}
+
+#footer{
+  background-color: $dark-gray;
+
+  .footer-main{
+    padding: 40px 15px 80px;
+    color: $light-gray;
+
+    h3{
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-top: 25px;
+      font-weight: $font-weight-bold;
+    }
+
+    ul a{
+      font-weight: $font-weight-normal;
+      color: $light-gray;
+
+      &:hover,
+      &:focus{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .location{
+      margin-bottom:15px;
+
+      h4{
+        font-size: 16px;
+        color: $brand-color;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .copyright{
+    text-align: center;
+    margin-top:60px;
+
+    p{
+      margin-bottom:0;
+    }
+
+    a{
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  .footer-social{
+    background-color: $brand-color;
+    text-align: center;
+
+    h3{
+      font-size:42px;
+      color: $dark-gray;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+
+    a{
+      color: #fff;
+      font-size:75px;
+
+      &+a{
+        margin-left:15px;
+      }
+
+      &:hover,
+      &:focus{
+        color: $gray;
+      }
+    }
+  }
+}

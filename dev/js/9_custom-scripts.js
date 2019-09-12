@@ -23,6 +23,7 @@ jQuery(document).ready(function($){
   });
 
   $('#hero-carousel.carousel-heights .carousel-inner .carousel-item').carouselHeights();
+  $('#testimonial-carousel.carousel-heights .carousel-inner .carousel-item').carouselHeights();
 
   var $animationElement = $('#planer-animation img');
   var $window = $(window);

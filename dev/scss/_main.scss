@@ -38,7 +38,7 @@ button:focus{
   outline: none;
 }
 
-.light-overlay{
+.overlay{
   position:absolute;
   height:100%;
   width:100%;
@@ -46,6 +46,10 @@ button:focus{
   left:0;
   z-index: 1;
   background-color: rgba(0,0,0,.5);
+
+  &.light-overlay{
+    background-color: rgba(0,0,0,.3);
+  }
 }
 
 .article-header{
