@@ -43,9 +43,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
           <i class="fas fa-bars"></i>
         </button>
-        <?php get_template_part('partials/navbar'); ?>
+        <?php get_template_part('partials/header', 'navbar'); ?>
       </div>
     </nav>
   </header>
 
-  <?php get_template_part('partials/hero');
+  <?php get_template_part('partials/header', 'hero');

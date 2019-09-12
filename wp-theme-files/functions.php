@@ -117,10 +117,8 @@ function eastwood_setup(){
   add_theme_support('responsive-embeds');
 
   register_nav_menus(array(
-    'header-nav' => 'Header Navigation',
-    'footer-nav' => 'Footer Navigation',
-    'company-menu' => 'Company Footer Menu',
-    'services-menu' => 'Services Footer Menu'
+    'footer-quick-links-nav' => 'Footer Quick Links Menu',
+    'footer-furniture-menu' => 'Footer Furniture Menu',
   ));
 
   load_theme_textdomain('eastwood', get_stylesheet_directory_uri() . '/languages');
@@ -132,5 +130,5 @@ function eastwood_setup(){
   add_theme_support('wc-product-gallery-slider');
 }
 
-require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
+//require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
 require_once dirname(__FILE__) . '/includes/woo-functions.php';
