@@ -136,3 +136,10 @@ button:focus{
     z-index: 1;
   }
 }
+
+.two-column-content{
+  @include media-breakpoint-up(md){
+    column-count: 2;
+    column-gap: 40px;
+  }
+}
