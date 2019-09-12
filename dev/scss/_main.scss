@@ -55,12 +55,15 @@ button:focus{
 .article-header{
   margin-bottom:25px;
 
-  .icon-header{
+  h2{
     font-size: 30px;
-    color: $gray;
-    position:relative;
     font-weight: $font-weight-bold;
-    margin-bottom: 0;
+    margin-bottom:0;
+    color: $gray;
+  }
+
+  .icon-header{
+    position:relative;
 
     &::before{
       content:"";
