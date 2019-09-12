@@ -1,4 +1,4 @@
-#hero{
+#hero-carousel{
   .carousel-item{
     position:relative;
     background-repeat:no-repeat;
@@ -34,5 +34,29 @@
     width:25px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+
+#hero{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+  min-height: 435px;
+  display: flex;
+  align-items: center;
+
+  .hero-caption{
+    position:relative;
+    z-index: 3;
+
+    h1{
+      color:#fff;
+      font-size:40px;
+      font-weight: $font-weight-bold;
+    }
+
+    @include media-breakpoint-up(lg){
+      max-width: 50%;
+    }
   }
 }
