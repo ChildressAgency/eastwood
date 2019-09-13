@@ -3,9 +3,20 @@
   <div class="container">
     <article class="text-center">
       <header class="article-header">
-        <h2 class="icon-header icon-two-hand-saw"><?php echo esc_html(get_field('locations_section_title', 'option')); ?></h2>
-        <p class="subtitle"><?php echo esc_html(get_field('locations_section_subtitle', 'option'); ?></p>
+        <?php
+          $locations_section_header = get_field('locations_section_header');
+          if($locations_section_header['image']){
+            echo '<img src="' . esc_url($locations_section_header['image']['url']) . '" class="img-fluid d-block mb-4" alt="' . esc_attr($locations_section_header['image']['alt']) . '" />';
+          }
+
+          echo '<h2>' . esc_html($locations_section_header['title']) . '</h2>';
+
+          if($locations_section_header['subtitle']){
+            echo '<p class="subtitle">' . esc_html($locations_section_header['subtitle']) . '</p>';
+          }
+        ?>
       </header>
+
       <?php echo wp_kses_post(get_field('locations_section_content', 'option')); ?>
     </article>
     <?php

@@ -35,3 +35,14 @@ add_action('plugins_loaded', 'eastwood_load_textdomain');
 function eastwood_load_textdomain(){
   load_plugin_textdomain('eastwood', false, basename(EASTWOOD_PLUGIN_DIR) . '/languages');
 }
+
+add_action('acf/init', 'eastwood_acf_options_page');
+function eastwood_acf_options_page(){
+  acf_add_options_page(array(
+    'page_title' => esc_html__('General Settings', 'eastwood'),
+    'menu_title' => esc_html__('General Settings', 'eastwood'),
+    'menu_slug' => 'general-settings',
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
+}

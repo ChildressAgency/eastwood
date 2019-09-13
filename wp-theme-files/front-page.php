@@ -6,12 +6,22 @@
       <div class="row">
         <div class="col-md-5">
           <article>
+
             <header class="article-header">
-              <h1 class="icon-header icon-chisel"><?php echo esc_html(get_field('first_section_title')); ?></h1>
-              <?php if(get_field('first_section_subtitle')): ?>
-                <p class="subtitle"><?php echo esc_html(get_field('first_section_subtitle')); ?></p>
-              <?php endif; ?>
+              <?php
+                $first_section_header = get_field('first_section_header');
+                if($first_section_header['image']){
+                  echo '<img src="' . esc_url($first_section_header['image']['url']) . '" class="img-fluid d-block mb-4" alt="' . esc_attr($first_section_header['image']['alt']) . '" />';
+                }
+
+                echo '<h1>' . esc_html($first_section_header['title']) . '</h1>';
+
+                if($first_section_header['subtitle']){
+                  echo '<p class="subtitle">' . esc_html($first_section_header['subtitle']);
+                }
+              ?>
             </header>
+
             <?php echo wp_kses_post(get_field('first_section_content')); ?>
             <?php
               $first_section_link = get_field('first_section_link');
@@ -42,11 +52,20 @@
     <div class="container">
       <article>
         <header class="article-header">
-          <h2 class="icon-header icon-handsaw"><?php echo esc_html(get_field('second_section_title')); ?></h2>
-          <?php if(get_field('second_section_subtitle')): ?>
-            <p class="subtitle"><?php echo esc_html(get_field('second_section_subtitle')); ?></p>
-          <?php endif; ?>
+          <?php
+            $second_section_header = get_field('second_section_header');
+            if($second_section_header['image']){
+              echo '<img src="' . esc_url($second_section_header['image']['url']) . '" class="img-fluid d-block mb-auto" alt="' . esc_attr($second_section_header['image']['alt']) . '" />';
+            }
+
+            echo '<h2>' . esc_html($second_section_header['title']) . '</h2>';
+
+            if($second_section_header['subtitle']){
+              echo '<p class="subtitle">' . esc_html($second_section_header['subtitle']) . '</p>';
+            }
+          ?>
         </header>
+
         <div class="two-column-content">
           <?php echo wp_kses_post(get_field('second_section_content')); ?>
         </div>
@@ -59,11 +78,20 @@
       <div class="col-md-6 text-side d-flex flex-column align-items-end">
         <article>
           <header class="article-header">
-            <h2 class="icon-header icon-planer"><?php echo esc_html(get_field('explore_section_title')); ?></h2>
-            <?php if(get_field('explore_section_subtitle')): ?>
-              <p class="subtitle"><?php echo esc_html(get_field('explore_section_subtitle')); ?></p>
-            <?php endif; ?>
+            <?php
+              $explore_section_header = get_field('explore_section_header');
+              if($explore_section_header['image']){
+                echo '<img src="' . esc_url($explore_section_header['image']['url']) . '" class="img-fluid d-block mb-4" alt="' . esc_attr($explore_section_header['image']['alt']) . '" />';
+              }
+
+              echo '<h2>' . esc_html($explore_section_header['title']) . '</h2>';
+
+              if($explore_section_header['subtitle']){
+                echo '<p class="subtitle">' . esc_html($explore_section_header['subtitle']) . '</p>';
+              }
+            ?>
           </header>
+
           <?php echo wp_kses_post(get_field('explore_section_content')); ?>
         </article>
 
@@ -160,11 +188,20 @@
       <div class="col-md-6">
         <article>
           <header class="article-header">
-            <h2 class="icon-header icon-ohio"><?php echo esc_html(get_field('custom_options_section_title')); ?></h2>
-            <?php if(get_field('custom_options_section_subtitle')): ?>
-              <p class="subtitle"><?php echo esc_html('custom_options_section_subtitle'); ?></p>
-            <?php endif; ?>
+            <?php
+              $options_section_header = get_field('custom_options_section_header');
+              if($options_section_header['image']){
+                echo '<img src="' . esc_url($options_section_header['image']['url']) . '" class="img-fluid d-block mb-4" alt="' . esc_attr($options_section_header['image']['alt']) . '" />';
+              }
+
+              echo '<h2>' . esc_html($options_section_header['title']) . '</h2>';
+
+              if($options_section_header['subtitle']){
+                echo '<p class="subtitle">' . esc_html($options_section_header['subtitle']) . '</p>';
+              }
+            ?>
           </header>
+
           <?php echo wp_kses_post(get_field('custom_options_section_content')); ?>
           <?php
             $custom_options_section_link = get_field('custom_options_section_link');
