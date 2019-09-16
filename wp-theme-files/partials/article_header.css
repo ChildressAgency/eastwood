@@ -1,0 +1,17 @@
+.article-header{
+  margin-bottom:25px;
+}
+
+.article-header h2{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #4d4d4d;
+}
+
+.article-header .subtitle{
+  font-size:22px;
+  text-transform: uppercase;
+  color: #9ebe3e;
+  font-weight: 500;
+}

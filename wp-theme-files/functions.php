@@ -132,3 +132,46 @@ function eastwood_setup(){
 
 //require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
 require_once dirname(__FILE__) . '/includes/woo-functions.php';
+
+add_action('widgets_init', 'eastwood_register_sidebars');
+function eastwood_register_sidebars(){
+  register_sidebar(array(
+    'name' => esc_html__('Shop Sidebar', 'eastwood'),
+    'id' => 'sidebar-shop',
+    'description' => esc_html__('Add widgets here to appear in your sidebar on the shop pages.', 'eastwood'),
+    'before_widget' => '<div class="sidebar-section">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>'
+  ));
+}
+
+add_filter('block_categories', 'eastwood_custom_block_category', 10, 2);
+function eastwood_custom_block_category($categories, $post){
+  return array_merge(
+    $categories,
+    array(
+      array(
+        'slug' => 'custom-blocks',
+        'title' => esc_html__('Custom Blocks', 'eastwood'),
+        'icon' => 'wordpress'
+      )
+    )
+  );
+}
+
+add_action('acf/init', 'eastwood_register_blocks');
+function eastwood_register_blocks(){
+  if(function_exists('acf_register_block_type')){
+    acf_register_block_type(array(
+      'name' => 'article_header',
+      'title' => esc_html__('Article Header', 'eastwood'),
+      'description' => esc_html__('Add a pre-styled article header.', 'eastwood'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/article_header.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/article_header.css'
+    ));
+  }
+}

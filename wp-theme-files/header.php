@@ -26,7 +26,7 @@
               <ul class="list-unstyled locations d-none d-lg-inline">
                 <?php while(have_rows('locations', $contact_page_id)): the_row(); ?>
                   <?php $location_phone = get_sub_field('location_phone'); ?>
-                  <li><?php the_sub_field('location_name'); ?>: <a href="tel:<?php echo esc_attr($location_phone); ?>"><?php echo esc_html($location_phone); ?></a></li>
+                  <li><?php the_sub_field('location_name'); ?> <a href="tel:<?php echo esc_attr($location_phone); ?>"><?php echo esc_html($location_phone); ?></a></li>
                 <?php endwhile; ?>
               </ul>
           <?php endif; ?>

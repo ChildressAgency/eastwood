@@ -11,8 +11,8 @@ if(!defined('ABSPATH')){ exit; }
     <?php if(have_rows('menu_items', 'option')): while(have_rows('menu_items', 'option')): the_row();
       $menu_style = get_row_layout();
 
-      switch($meu_style){
-        case 'mega-menu': ?>
+      switch($menu_style){
+        case 'mega_menu': ?>
           <li class="nav-item dropdown mega-dropdown">
             <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html(get_sub_field('mega_menu_title')); ?></a>
             <div class="dropdown-menu mega-menu">
@@ -23,7 +23,7 @@ if(!defined('ABSPATH')){ exit; }
                   <div id="" class="nav flex-column nav-pills mega-top-nav" role="tablist" aria-orientation="vertical">
                     <?php 
                       $t = 0; 
-                      foreach($menu_items as $menu_item){
+                      foreach($mega_menu_items as $menu_item){
 
                         $menu_item_title = $menu_item['mega_menu_item_title'];
                         $menu_item_slug = sanitize_title($menu_item_title);
@@ -43,12 +43,12 @@ if(!defined('ABSPATH')){ exit; }
 
                         $t++; 
                       }
-                      reset($menu_items); ?>
+                      reset($mega_menu_items); ?>
                   </div>
                 </div>
                 <div class="col-sm-8">
                   <div id="furniture-content" class="tab-content">
-                    <?php $c = 0; foreach($menu_items as $menu_item): ?>
+                    <?php $c = 0; foreach($mega_menu_items as $menu_item): ?>
                       <?php 
                         $menu_item_title = $menu_item['mega_menu_item_title'];
                         $menu_item_slug = sanitize_title($menu_item_title);
@@ -91,7 +91,7 @@ if(!defined('ABSPATH')){ exit; }
                           </div>
                           <div class="col-sm-6">
                             <div id="" class="tab-content furniture-sub-content">
-                              <img src="<?php echo esc_url($first_image['url']); ?>" id="menu-img-bedroom" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($first_image['alt']); ?>" />
+                              <img src="<?php echo esc_url($first_image['url']); ?>" id="menu-img-<?php echo esc_html($menu_item_slug); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($first_image['alt']); ?>" />
                             </div>
                           </div>
                         </div>
@@ -104,7 +104,7 @@ if(!defined('ABSPATH')){ exit; }
           </li>
         <?php break;
 
-        case 'dropdown-menu': ?>
+        case 'dropdown_menu': ?>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html(get_sub_field('menu_title')); ?></a>
             <div class="dropdown-menu">
@@ -118,7 +118,7 @@ if(!defined('ABSPATH')){ exit; }
                       '<a href="%s" class="dropdown-item">%s</a>',
                       esc_url($dropdown_menu_link['url']),
                       esc_html($dropdown_menu_link['title'])
-                    )
+                    );
                   }
                 }
               ?>
