@@ -55,8 +55,8 @@
                 foreach($locations as $location): ?>
                   <div class="location">
                     <h4><?php echo esc_html($location['location_name']); ?></h4>
-                    <?php echo esc_html('location_hours'); ?>
-                    <p><?php echo esc_html('location_phone'); ?> | <?php echo esc_html('location_email'); ?></p>
+                    <?php echo esc_html($location['location_hours']); ?>
+                    <p><?php echo esc_html($location['location_phone']); ?> | <?php echo esc_html($location['location_email']); ?></p>
                   </div>
             <?php endforeach; endif; ?>
           </div>
