@@ -32,6 +32,11 @@ a{
     background-color: $brand-color-alt;
     text-decoration:none;
   }
+
+  &.btn-small{
+    font-size: 16px;
+    padding: 5px 40px;
+  }
 }
 
 button:focus{
@@ -110,6 +115,18 @@ button:focus{
   }
 }
 
+.entry-content{
+  margin-top:40px;
+  margin-bottom:40px;
+
+  .article-header{
+    text-align: center;
+    max-width: 730px;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}
+
 .img-stylized-background{
   position:relative;
 
@@ -145,4 +162,55 @@ button:focus{
     column-count: 2;
     column-gap: 40px;
   }
+}
+
+.location{
+  border-bottom: 2px solid $gray;
+  padding: 0px 15px 25px 25px;
+  margin-bottom: 25px;
+
+  &:last-child{
+    border-bottom: none;
+  }
+
+  h3{
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    color: $brand-color;
+    text-transform: uppercase;
+  }
+
+  p{
+    margin-bottom:5px;
+  }
+
+  .btn-main{
+    margin-top: 10px;
+  }
+}
+
+#contact-form{
+  background-color: #f2f2f2;
+  padding-top:40px;
+  padding-bottom:40px;
+
+  h2{
+    font-size:30px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+
+  .contact-form{
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .btn-main{
+      margin-top:25px;
+    }
+  }
+}
+
+.form-control{
+  border-radius: 0;
 }
