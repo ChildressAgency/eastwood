@@ -60,7 +60,15 @@ button:focus{
 .article-header{
   margin-bottom:25px;
 
-  h2{
+  h1{
+    font-size:40px;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+    color: $gray;
+  }
+
+  h2,
+  h1.front-page-title{
     font-size: 30px;
     font-weight: $font-weight-bold;
     margin-bottom:0;

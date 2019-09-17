@@ -17,7 +17,7 @@
         <div class="carousel-inner">
           <?php $s = 0; foreach($testimonials as $testimonial): ?>
 
-            <div class="carousel-item<?php if($s = 0){ echo ' active'; } ?>">
+            <div class="carousel-item<?php if($s == 0){ echo ' active'; } ?>">
               <div class="testimonial">
                 <?php echo wp_kses_post($testimonial['testimonial']); ?>
                 <cite><?php echo esc_html($testimonial['testimonial_author']); ?></cite>

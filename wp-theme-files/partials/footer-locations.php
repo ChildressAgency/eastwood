@@ -4,15 +4,17 @@
     <article class="text-center">
       <header class="article-header">
         <?php
-          $locations_section_header = get_field('locations_section_header');
-          if($locations_section_header['image']){
-            echo '<img src="' . esc_url($locations_section_header['image']['url']) . '" class="img-fluid d-block mb-4" alt="' . esc_attr($locations_section_header['image']['alt']) . '" />';
+          $locations_section_header = get_field('locations_section_header', 'option');
+          if(isset($locations_section_header['article_header']['image'])){
+            echo '<img src="' . esc_url($locations_section_header['article_header']['image']['url']) . '" class="img-fluid d-block mb-4 mx-auto" alt="' . esc_attr($locations_section_header['article_header']['image']['alt']) . '" />';
           }
 
-          echo '<h2>' . esc_html($locations_section_header['title']) . '</h2>';
+          if(isset($locations_section_header['article_header']['subtitle'])){
+            echo '<h2>' . esc_html($locations_section_header['article_header']['title']) . '</h2>';
+          }
 
-          if($locations_section_header['subtitle']){
-            echo '<p class="subtitle">' . esc_html($locations_section_header['subtitle']) . '</p>';
+          if(isset($locations_section_header['article_header']['subtitle'])){
+            echo '<p class="subtitle">' . esc_html($locations_section_header['article_header']['subtitle']) . '</p>';
           }
         ?>
       </header>
@@ -29,7 +31,7 @@
             <div class="col-md-4">
               <?php $location_image = get_sub_field('location_image'); ?>
               <div class="location-bg-img" style="background-image:url(<?php echo esc_url($location_image['url']); ?>);">
-                <a href="<?php echo esc_url(home_url('contact')); ?>"><?php echo esc_html(get_sub_field('location_name')); ?>, <?php echo esc_html(get_sub_field('location_state')); ?></a>
+                <a href="<?php echo esc_url(home_url('contact')); ?>"><?php echo esc_html(get_sub_field('location_title')); ?></a>
                 <div class="overlay light-overlay"></div>
               </div>
             </div>

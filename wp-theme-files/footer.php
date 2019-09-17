@@ -54,7 +54,7 @@
               if($locations): 
                 foreach($locations as $location): ?>
                   <div class="location">
-                    <h4><?php echo esc_html($location['location_name']); ?></h4>
+                    <h4><?php echo esc_html($location['location_title']); ?></h4>
                     <?php echo esc_html($location['location_hours']); ?>
                     <p><?php echo esc_html($location['location_phone']); ?> | <?php echo esc_html($location['location_email']); ?></p>
                   </div>

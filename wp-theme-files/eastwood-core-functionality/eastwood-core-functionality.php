@@ -45,4 +45,16 @@ function eastwood_acf_options_page(){
     'capability' => 'edit_posts',
     'redirect' => false
   ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Header Menu Settings', 'eastwood'),
+    'menu_title' => esc_html__('Header Menu', 'eastwood'),
+    'parent_slug' => 'general-settings'
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Testimonials Settings' , 'eastwood'),
+    'menu_title' => esc_html__('Testimonials', 'eastwood'),
+    'parent_slug' => 'general-settings'
+  ));
 }

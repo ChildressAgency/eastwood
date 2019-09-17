@@ -117,7 +117,7 @@ function eastwood_setup(){
   add_theme_support('responsive-embeds');
 
   register_nav_menus(array(
-    'footer-quick-links-nav' => 'Footer Quick Links Menu',
+    'footer-quick-links-menu' => 'Footer Quick Links Menu',
     'footer-furniture-menu' => 'Footer Furniture Menu',
   ));
 
