@@ -18,7 +18,7 @@ function eastwood_wrapper_end(){
 
 add_action('woocommerce_before_shop_loop', 'eastwood_shop_loop_wrapper_open', 15);
 function eastwood_shop_loop_wrapper_open(){
-  echo '<div class="row tna-product-loop">
+  echo '<div class="row eastwood-product-loop">
           <div class="col-md-8 col-lg-9 order-md-12">';
 }
 
