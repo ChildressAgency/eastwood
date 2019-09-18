@@ -13,7 +13,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <header id="header">
     <section id="masthead">
       <div class="container d-flex align-items-stretch">

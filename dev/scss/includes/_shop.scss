@@ -1,0 +1,147 @@
+.woocommerce{
+  ul.products.columns-3 li.product.product-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto !important;
+    margin:0;
+
+    &.first{
+      clear:none;
+    }
+
+    @include media-breakpoint-down(sm){
+      float:none !important;
+    }
+  }
+
+  .shop-intro{
+    max-width:730px;
+    margin: 40px auto;
+    text-align:center;
+  }
+
+  .eastwood-product-loop{
+    padding-top: 40px;
+    border-top: 2px solid #000;
+  }
+
+  .products .btn-main{
+    font-size:16px;
+  }
+}
+
+#shop-sidebar{
+  .sidebar-section{
+
+    & + .sidebar-section{
+      padding-top: 20px; 
+    }
+
+    h3{
+      font-size:24px;
+      text-transform:uppercase;
+      font-weight: $font-weight-bold;
+      color: $gray;
+    }
+
+    ul{
+      list-style:none;
+      padding-left:0;
+
+      ul.children{
+        list-style: none;
+        padding-left:32px;
+
+        .cat-item a{
+          font-size: 16px;
+          font-weight: $font-weight-normal;
+        }
+      }
+
+      .cat-item{
+        margin-bottom:10px;
+
+        a{
+          color: $gray;
+          font-size:18px;
+          text-transform:uppercase;
+        }
+        
+        .count{
+          font-size:16px;
+        }
+      }
+    }
+
+    span.toggle{
+      margin-right:6px;
+    }
+  }
+}
+
+.img-link{
+  height: 250px;
+  width: 250px;
+  position:relative;
+  text-align:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  a{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    padding: 15px;
+    opacity: 0;
+
+    &::before{
+      content: "\003e";
+      position: absolute;
+      font-size: 151px;
+      font-weight: $font-weight-medium;
+      color: $brand-color;
+      line-height: 1em;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index:1;
+      margin-top:-15px;
+    }
+    span{
+      font-size: 20px;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      line-height: 1.2em;
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  &:hover a{
+    opacity: 1;
+    text-decoration:none;
+  }
+}
+
+.woocommerce-Tabs-panel{
+  min-height: 400px;
+}
+
+.entry-summary{
+  .product_title{
+    font-size: 30px;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.product .entry-summary .price{
+  margin-top: 40px;
+}

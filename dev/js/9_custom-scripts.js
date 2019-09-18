@@ -27,7 +27,10 @@ jQuery(document).ready(function($){
 
   var $animationElement = $('#planer-animation img');
   var $window = $(window);
-  $window.on('scroll resize', isInViewport);
+
+  if($($animationElement).length){
+    $window.on('scroll resize', isInViewport);
+  }
 
   function isInViewport(){
     var viewportHeight = $window.height();
@@ -49,6 +52,64 @@ jQuery(document).ready(function($){
 
     $('#hp-explore').find('.image-side').css('background-image', 'url(' + $newImage + ')');
   });
+
+  /**
+   * WooCommerce Product Category Accordion jQuery Menu
+   * @link https://wpbeaches.com/woocommerce-accordion-style-expand-collapse-product-category-menu/
+   */
+
+  if ($('ul.product-categories').length > 0) {
+
+    // Set variables
+    // pC = Parent Category 
+    // fpC = First Parent Category
+    // cC = Current Category
+    // cCp = Currents Category's Parent
+
+    var
+      pC = $('.product-categories li.cat-parent'),
+      fpC = $('.product-categories li.cat-parent:first-child'), // Start this one open
+      cC = $('.product-categories li.current-cat'),
+      cCp = $('.product-categories li.current-cat-parent');
+
+    pC.prepend('<span class="toggle"><i class="far fa-minus-square fa-plus-square"></i></span>');
+    pC.parent('ul').addClass('has-toggle'); pC.children('ul').hide();
+
+    if (pC.hasClass("current-cat-parent")) {
+      cCp.addClass('open'); cCp.children('ul').show(); cCp.children().children('i.far').removeClass('fa-plus-square');
+    }
+    else if (pC.hasClass("current-cat")) {
+      cC.addClass('open'); cC.children('ul').show(); cC.children().children('i.far').removeClass('fa-plus-square');
+    }
+    else {
+      fpC.addClass('open'); fpC.children('ul').show(); fpC.children().children('i.far').removeClass('fa-plus-square');
+    }
+
+    $('.has-toggle span.toggle').on('click', function () {
+      $t = $(this);
+      if ($t.parent().hasClass("open")) {
+        $t.parent().removeClass('open'); $t.parent().children('ul').slideUp(); $t.children('i.far').addClass('fa-plus-square');
+      }
+      else {
+        $t.parent().parent().find('ul.children').slideUp();
+        $t.parent().parent().find('li.cat-parent').removeClass('open');
+        $t.parent().parent().find('li.cat-parent').children().children('i.far').addClass('fa-plus-square');
+
+        $t.parent().addClass('open');
+        $t.parent().children('ul').slideDown();
+        $t.children('i.far').removeClass('fa-plus-square');
+      }
+
+    });
+
+
+    // Link the count number
+    $('.count').css('cursor', 'pointer');
+    $('.count').on('click', function (event) {
+      $(this).prev('a')[0].click();
+    });
+
+  }
 }); //jQuery
 
 
