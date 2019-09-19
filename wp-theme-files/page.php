@@ -6,7 +6,7 @@
         while(have_posts()){
           the_post();
 
-          echo '<article>';
+          echo '<article class="entry-content">';
             the_content();
           echo '</article>';
         }
