@@ -73,9 +73,40 @@ function eastwood_template_loop_category_link_close($category){
   echo '</div>';
 }
 
+/**
+ * product loop thumbnail
+ */
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
 
+add_action('woocommerce_before_shop_loop_item', 'eastwood_template_loop_product_link_open', 10);
+function eastwood_template_loop_product_link_open(){
+  echo '<div class="img-link" style="background-image:url(' . get_the_post_thumbnail_url() . ');">';
+}
+
+add_action('woocommerce_shop_loop_item_title', 'eastwood_shop_loop_item_title', 10);
+function eastwood_shop_loop_item_title(){
+   //echo '<h2 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2>';
+  global $product;
+
+  $product_link = apply_filters('woocommerce_loop_product_link', get_the_permalink(), $product);
+  echo '<a href="' . esc_url($product_link) . '">';
+    echo '<span>' . esc_html(get_the_title()) . '</span>';
+  echo '</a>';
+}
+
+add_action('woocommerce_after_shop_loop_item', 'eastwood_template_loop_product_link_close', 5);
+function eastwood_template_loop_product_link_close(){
+  echo '</div>';
+}
+
+/**
+ * display loop header
+ */
 add_action('woocommerce_before_main_content', 'eastwood_get_shop_header', 50);
 function eastwood_get_shop_header(){
   echo '<article class="shop-intro">';
@@ -142,5 +173,8 @@ function eastwood_get_category_header($header_id){
   return $category_header;
 }
 
+/**
+ * rearrange single product meta section
+ */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 80);
