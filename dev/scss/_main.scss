@@ -225,12 +225,26 @@ button:focus{
   border-radius: 0;
 }
 
+.options-section{
+  h2{
+    font-size:30px;
+    font-weight: $font-weight-bold;
+    margin-bottom:0;
+    color: $gray;
+  } 
+  
+  .light-note{
+    color: $light-gray;
+  }
+}
+
 .options{
   a.option{
     position:relative;
     display:block;
     height:155px;
     width:155px;
+    margin:15px;
 
     .option-caption{
       opacity: 0;
@@ -287,5 +301,18 @@ button:focus{
         opacity: 1;
       }
     }
+  }
+}
+
+#have-questions{
+  background-color: #f2f2f2;
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+
+  article{
+    max-width: 800px;
+    margin-left:auto;
+    margin-right:auto;
   }
 }

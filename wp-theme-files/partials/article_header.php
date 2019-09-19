@@ -12,7 +12,7 @@
 
       printf('<h1>%s</h1>', esc_html($header['title']));
 
-      if($header['article_header_subtitle']){
+      if($header['subtitle']){
         printf('<p class="subtitle">%s</p>', esc_html($header['subtitle']));
       }
     }

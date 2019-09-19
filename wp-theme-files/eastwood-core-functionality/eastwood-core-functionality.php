@@ -65,7 +65,8 @@ function eastwood_acf_options_page(){
 add_filter('woocommerce_product_tabs', 'eastwood_additional_product_tabs');
 function eastwood_additional_product_tabs($tabs){
   $wood_species = get_field('wood_options_product_tab');
-  if($wood_species){
+  //var_dump($wood_species['wood_options_wood_species']);
+  if(($wood_species['product_tab_intro'] !== null && $wood_species['product_tab_intro'] !== '') || $wood_species['wood_options_wood_species']){
     $tabs['wood_options_tab'] = array(
       'title' => esc_html__('Wood Options', 'eastwood'),
       'priority' => 11,
@@ -74,13 +75,15 @@ function eastwood_additional_product_tabs($tabs){
   }
 
   $stains_finishes = get_field('stains_finishes_product_tab');
-  if($stains_finishes){
+  if(($stains_finishes['product_tab_intro'] !== null && $stains_finishes['product_tab_intro'] !== '') || $stains_finishes['stains_finishes_stains_finishes']){
     $tabs['stains_finishes_tab'] = array(
       'title' => esc_html__('Stains & Finishes', 'eastwood'),
       'priority' => 12,
       'callback' => 'eastwood_stains_finishes_tab'
     );
   }
+
+  return $tabs;
 }
 
 function eastwood_wood_options_tab(){
@@ -89,8 +92,8 @@ function eastwood_wood_options_tab(){
     echo apply_filters('the_content', wp_kses_post($product_tab['product_tab_intro']));
   echo '</div>';
 
-  $wood_species = $product_tab['wood_species'];
-  include(locate_template('loop-custom_options.php', false, false));
+  $custom_options = $product_tab['wood_options_wood_species'];
+  include(locate_template('partials/loop-custom_options.php', false, false));
 }
 
 function eastwood_stains_finishes_tab(){
@@ -99,6 +102,6 @@ function eastwood_stains_finishes_tab(){
     echo apply_filters('the_content', wp_kses_post($product_tab['product_tab_intro']));
   echo '</div>';
 
-  $stains_finishes = $product_tab['stains_finishes'];
-  include(location_template('loop-custom_options.php', false, false));
+  $custom_options = $product_tab['stains_finishes_stains_finishes'];
+  include(location_template('partials/loop-custom_options.php', false, false));
 }

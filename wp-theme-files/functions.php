@@ -173,5 +173,16 @@ function eastwood_register_blocks(){
       'render_template' => get_stylesheet_directory() . '/partials/article_header.php',
       'enqueue_style' => get_stylesheet_directory_uri() . '/partials/article_header.css'
     ));
+
+    acf_register_block_type(array(
+      'name' => 'content_styled_image',
+      'title' => esc_html__('Content with Styled Image', 'eastwood'),
+      'description' => esc_html__('Display content with article header and a stylized image.', 'eastwood'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/content_styled_image.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/content_styled_image.css'
+    ));
   }
 }
