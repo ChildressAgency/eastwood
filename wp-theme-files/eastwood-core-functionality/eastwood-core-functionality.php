@@ -58,3 +58,47 @@ function eastwood_acf_options_page(){
     'parent_slug' => 'general-settings'
   ));
 }
+
+/**
+ * add additional woocommerce product tabs
+ */
+add_filter('woocommerce_product_tabs', 'eastwood_additional_product_tabs');
+function eastwood_additional_product_tabs($tabs){
+  $wood_species = get_field('wood_options_product_tab');
+  if($wood_species){
+    $tabs['wood_options_tab'] = array(
+      'title' => esc_html__('Wood Options', 'eastwood'),
+      'priority' => 11,
+      'callback' => 'eastwood_wood_options_tab'
+    );
+  }
+
+  $stains_finishes = get_field('stains_finishes_product_tab');
+  if($stains_finishes){
+    $tabs['stains_finishes_tab'] = array(
+      'title' => esc_html__('Stains & Finishes', 'eastwood'),
+      'priority' => 12,
+      'callback' => 'eastwood_stains_finishes_tab'
+    );
+  }
+}
+
+function eastwood_wood_options_tab(){
+  $product_tab = get_field('wood_options_product_tab');
+  echo '<div class="tab-intro">';
+    echo apply_filters('the_content', wp_kses_post($product_tab['product_tab_intro']));
+  echo '</div>';
+
+  $wood_species = $product_tab['wood_species'];
+  include(locate_template('loop-custom_options.php', false, false));
+}
+
+function eastwood_stains_finishes_tab(){
+  $product_tab = get_field('stains_finishes_product_tab');
+  echo '<div class="tab-intro">';
+    echo apply_filters('the_content', wp_kses_post($product_tab['product_tab_intro']));
+  echo '</div>';
+
+  $stains_finishes = $product_tab['stains_finishes'];
+  include(location_template('loop-custom_options.php', false, false));
+}
