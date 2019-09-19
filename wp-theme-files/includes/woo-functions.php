@@ -39,7 +39,18 @@ add_filter('woocommerce_variable_empty_price_html', 'eastwood_empty_price_html')
 add_filter('woocommerce_variation_empty_price_html', 'eastwood_empty_price_html');
 function eastwood_empty_price_html(){
   //return 'Call for price';
-  $contact_for_price = '<a href="#" class="btn-main">Contact About Price</a>';
+  global $product;
+  $product_name = $product->get_name();
+  $product_sku = $product->get_sku();
+
+  $contact_for_price = '<a href="#product-inquiry-modal" class="btn-main" data-toggle="modal">Contact About Price</a>';
+
+  $contact_for_price = sprintf(
+    '<a href="#product-inquiry-modal" class="btn-main" data-toggle="modal" data-product_name="%s" data-product_sku="%s">%s</a>',
+    esc_attr($product_name),
+    esc_attr($product_sku),
+    esc_html__('Contact About Price', 'eastwood')
+  );
 
   return $contact_for_price;
 }
@@ -178,3 +189,28 @@ function eastwood_get_category_header($header_id){
  */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 80);
+
+/**
+ * Product inquiry modal content
+ */
+add_action('woocommerce_after_main_content', 'eastwood_product_inquiry_modal', 20);
+function eastwood_product_inquiry_modal(){
+  $product_inquiry_form = get_field('product_inquiry_form_shortcode', 'option'); ?>
+
+  <div class="modal fade" id="product-inquiry-modal" tabindex="-1" role="dialog" aria-labelledby="product-inquiry-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="product-inquiry-modal-label"></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <?php echo do_shortcode($product_inquiry_form); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php }

@@ -29,6 +29,22 @@
   .products .btn-main{
     font-size:16px;
   }
+
+  .col-1,
+  .col-2{
+    flex:none;
+    max-width:none;
+  }
+
+  .woocommerce-address-fields{
+    label{
+      width:100%;
+      margin-bottom:0;
+    }
+    .woocommerce-input-wrapper{
+      width:100%;
+    }
+  }
 }
 
 #shop-sidebar{
@@ -144,4 +160,9 @@
 
 .product .entry-summary .price{
   margin-top: 40px;
+}
+
+article .woocommerce{
+  margin-top:40px;
+  margin-bottom:60px;
 }

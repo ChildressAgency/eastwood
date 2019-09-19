@@ -110,6 +110,18 @@ jQuery(document).ready(function($){
     });
 
   }
+
+  $('#product-inquiry-modal').on('show.bs.modal', function(e){
+    var button = $(e.relatedTarget);
+    var productName = button.data('product_name');
+    var productSku = button.data('product_sku');
+
+    var modal = $(this);
+    modalTitle = productName + '<small class="d-block">Product Sku: ' + productSku + '</small>';
+    modal.find('.modal-title').html(modalTitle);
+    modal.find('#product-name').val(productName);
+    modal.find('#product-sku').val(productSku);
+  });
 }); //jQuery
 
 
