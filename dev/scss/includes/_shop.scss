@@ -97,13 +97,14 @@
 }
 
 .img-link{
-  height: 250px;
-  width: 250px;
+  height: 240px;
+  width: 240px;
   position:relative;
   text-align:center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  margin:15px;
 
   a{
     position: absolute;
@@ -148,7 +149,7 @@
 }
 
 .woocommerce-Tabs-panel{
-  min-height: 400px;
+  min-height: 150px;
 }
 
 .entry-summary{

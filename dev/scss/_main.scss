@@ -316,3 +316,22 @@ button:focus{
     margin-right:auto;
   }
 }
+
+#customer-gallery{
+
+  .gallery-img{
+    display:block;
+    width:240px;
+    height:240px;
+    margin:25px 15px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center center;
+    position:relative;
+
+    span{
+      position:absolute;
+      bottom:-25px;
+    }
+  }
+}
