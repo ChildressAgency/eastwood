@@ -2,7 +2,7 @@
   $testimonials = get_field('testimonials', 'option');
   if($testimonials): ?>
     <section id="testimonials">
-      <span class="quotes"></span>
+      <span id="quotes"></span>
       <div id="testimonial-carousel" class="carousel slide carousel-heights" data-ride="carousel">
         <?php if(count($testimonials) > 1): ?>
           <ol class="carousel-indicators">

@@ -335,3 +335,20 @@ button:focus{
     }
   }
 }
+
+#dont-settle{
+  margin-top:80px;
+  margin-bottom:80px;
+}
+
+#quotes{
+  display:block;
+  position: absolute;
+  height:78px;
+  width:111px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image:url(images/quotes.png);
+  background-repeat: no-repeat;
+}
