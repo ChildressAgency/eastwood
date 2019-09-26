@@ -103,5 +103,5 @@ function eastwood_stains_finishes_tab(){
   echo '</div>';
 
   $custom_options = $product_tab['stains_finishes_stains_finishes'];
-  include(location_template('partials/loop-custom_options.php', false, false));
+  include(locate_template('partials/loop-custom_options.php', false, false));
 }

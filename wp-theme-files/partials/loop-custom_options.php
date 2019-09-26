@@ -1,5 +1,5 @@
 <div class="options d-flex flex-wrap">
-  <?php foreach($custom_options as $option): ?>
+  <?php if($custom_options): foreach($custom_options as $option): ?>
     <a href="<?php echo esc_url($option['image']['url']); ?>" class="option" data-lightbox="<?php echo $group; ?>" title="<?php echo esc_attr($option['name']); ?>">
       <img src="<?php echo esc_url($option['image']['url']); ?>" class="img-fluid d-block" alt="<?php echo esc_attr($option['image']['alt']); ?>" />
       <div class="option-caption">
@@ -14,5 +14,5 @@
         </span>
       </div>
     </a>
-  <?php endforeach; ?>
+  <?php endforeach; endif; ?>
 </div>
