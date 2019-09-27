@@ -43,7 +43,7 @@
 <?php else: ?>
 
   <?php
-    if(is_shop()){
+    if(is_shop() || is_product_tag()){
       $shop_page = get_page_by_path('shop');
       $shop_page_id = $shop_page->ID;
 
@@ -60,6 +60,7 @@
       $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_id);
 
       if(!$hero_image){
+        //this cat didn't have hero img set so try its parent
         if($cat->parent > 0){
           $parent_id = $cat->parent;
 
@@ -67,6 +68,7 @@
           $hero_image_css = get_field('hero_background_image_css', 'product_cat_' . $parent_id);
         }
         else{
+          //no parent so get shop
           $shop_page = get_page_by_path('shop');
           $shop_page_id = $shop_page->ID;
 
@@ -76,12 +78,81 @@
       }
 
       if(!$hero_caption){
+        //this cat didn't have hero caption set to try its parent
         if($cat->parent > 0){
           $parent_id = $cat->parent;
 
           $hero_caption = get_field('hero_caption', 'product_cat_' . $parent_id);
         }
         else{
+          //no parent so get shop hero caption
+          $shop_page = get_page_by_path('shop');
+          $shop_page_id = $shop_page->ID;
+
+          $hero_caption = get_field('hero_caption', $shop_page_id);
+        }
+      }
+    }
+    elseif(is_product()){
+      $cats = get_the_terms(get_the_ID(), 'product_cat');
+      
+      foreach($cats as $cat){
+        if($cat->parent > 0){
+          //get the id of one of the child cats
+          $cat_id = $cat->term_id;
+        }
+      }
+
+      if($cat_id){
+        $hero_image = get_field('hero_background_image', 'product_cat_' . $cat_id);
+        $hero_image_css = get_field('hero_background_image_css', 'product_cat_' . $cat_id);
+
+        if(!$hero_image){
+          $cat = get_term($cat_id, 'product_cat');
+          $cat_parent = $cat->parent;
+
+          $hero_image = get_field('hero_background_image', 'product_cat_' . $cat_parent);
+          $hero_image_css = get_field('hero_background_image_css', 'product_cat_' . $cat_parent);
+
+          if(!$hero_image){
+            $shop_page = get_page_by_path('shop');
+            $shop_page_id = $shop_page->ID;
+
+            $hero_image = get_field('hero_background_image', $shop_page_id);
+            $hero_image_css = get_field('hero_background_image_css', $shop_page_id);
+          }
+        }
+
+        $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_id);
+        if(!$hero_caption){
+          $cat = get_term($cat_id, 'product_cat');
+          $cat_parent = $cat->parent;
+
+          $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_parent);
+          if(!$hero_caption){
+            $shop_page = get_page_by_path('shop');
+            $shop_page_id = $shop_page->ID;
+
+            $hero_caption = get_field('hero_caption', $shop_page_id);
+          }
+        }
+      }
+      else{
+        $cat_id = $cats[0]->term_id;
+
+        $hero_image = get_field('hero_background_image', 'product_cat_' . $cat_id);
+        $hero_image_css = get_field('hero_background_image_css', 'product_cat_' . $cat_id);
+
+        if(!$hero_image){
+          $shop_page = get_page_by_path('shop');
+          $shop_page_id = $shop_page->ID;
+
+          $hero_image = get_field('hero_background_image', $shop_page_id);
+          $hero_image_css = get_field('hero_background_image_css', $shop_page_id);
+        }
+
+        $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_id);
+        if(!$hero_caption){
           $shop_page = get_page_by_path('shop');
           $shop_page_id = $shop_page->ID;
 
@@ -90,12 +161,14 @@
       }
     }
     else{
+      //not a shop, product cat archive or product page, just a normal page
       $hero_image = get_field('hero_background_image');
       $hero_image_css = get_field('hero_background_image_css');
       $hero_caption = get_field('hero_caption');
     }
 
     if(!$hero_image){
+      //none of the stuff above got us a hero image so fallback to default setting
       $hero_image = get_field('default_hero_background_image', 'option');
       $hero_image_css = get_field('default_hero_background_image_css', 'option');
     }
