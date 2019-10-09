@@ -131,7 +131,9 @@ if(!defined('ABSPATH')){ exit; }
         default: ?>
           <li class="nav-item">
             <?php $menu_link = get_sub_field('menu_link'); ?>
-            <a href="<?php echo esc_url($menu_link['url']); ?>" class="nav-link"><?php echo esc_html($menu_link['title']); ?></a>
+            <?php if($menu_link): ?>
+              <a href="<?php echo esc_url($menu_link['url']); ?>" class="nav-link"><?php echo esc_html($menu_link['title']); ?></a>
+            <?php endif; ?>
           </li>
 
       <?php } ?>
