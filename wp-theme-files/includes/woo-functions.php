@@ -215,4 +215,7 @@ function eastwood_product_inquiry_modal(){
   </div>
 <?php }
 
+//remove related products display
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+//remove sorting dropdown
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
