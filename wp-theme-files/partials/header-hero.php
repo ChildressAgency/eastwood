@@ -50,6 +50,7 @@
       $hero_image = get_field('hero_background_image', $shop_page_id);
       $hero_image_css = get_field('hero_background_image_css', $shop_page_id);
       $hero_caption = get_field('hero_caption', $shop_page_id);
+      $hero_caption_position = (get_field('hero_caption_centered', $shop_page_id)) ? ' hero-caption-centered' : '';
     }
     elseif(is_product_category()){
       $cat = get_queried_object();
@@ -58,6 +59,7 @@
       $hero_image = get_field('hero_background_image', 'product_cat_' . $cat_id);
       $hero_image_css = get_field('hero_background_image_css', 'product_cat_' . $cat_id);
       $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_id);
+      $hero_caption_position = (get_field('hero_caption_centered', 'product_cat_' . $cat_id)) ? ' hero-caption-centered' : '';
 
       if(!$hero_image){
         //this cat didn't have hero img set so try its parent
@@ -83,6 +85,7 @@
           $parent_id = $cat->parent;
 
           $hero_caption = get_field('hero_caption', 'product_cat_' . $parent_id);
+          $hero_caption_position = (get_field('hero_caption_centered', 'product_cat_' . $parent_id)) ? ' hero-caption-centered' : '';
         }
         else{
           //no parent so get shop hero caption
@@ -90,6 +93,7 @@
           $shop_page_id = $shop_page->ID;
 
           $hero_caption = get_field('hero_caption', $shop_page_id);
+          $hero_caption_position = (get_field('hero_caption_centered', $shop_page_id))? ' hero-caption-centered' : '';
         }
       }
     }
@@ -124,16 +128,20 @@
         }
 
         $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_id);
+        $hero_caption_position = (get_field('hero_caption_centered', 'product_cat_' . $cat_id)) ? ' hero-caption-centered' : '';
+
         if(!$hero_caption){
           $cat = get_term($cat_id, 'product_cat');
           $cat_parent = $cat->parent;
 
           $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_parent);
+          $hero_caption_position = (get_field('hero_caption_centered', 'product_cat_' . $cat_parent)) ? ' hero-caption-centered' : '';
           if(!$hero_caption){
             $shop_page = get_page_by_path('shop');
             $shop_page_id = $shop_page->ID;
 
             $hero_caption = get_field('hero_caption', $shop_page_id);
+            $hero_caption_position = (get_field('hero_caption_centered', $shop_page_id)) ? ' hero-caption-centered' : '';
           }
         }
       }
@@ -152,11 +160,14 @@
         }
 
         $hero_caption = get_field('hero_caption', 'product_cat_' . $cat_id);
+        $hero_caption_position = (get_field('hero_caption_centered', 'product_cat_' . $cat_id)) ? ' hero-caption-centered' : '';
+
         if(!$hero_caption){
           $shop_page = get_page_by_path('shop');
           $shop_page_id = $shop_page->ID;
 
           $hero_caption = get_field('hero_caption', $shop_page_id);
+          $hero_caption_position = (get_field('hero_caption_centered', $shop_page_id)) ? ' hero-caption-centered' : '';
         }
       }
     }
@@ -165,6 +176,7 @@
       $hero_image = get_field('hero_background_image');
       $hero_image_css = get_field('hero_background_image_css');
       $hero_caption = get_field('hero_caption');
+      $hero_caption_position = (get_field('hero_caption_centered')) ? ' hero-caption-centered' : '';
     }
 
     if(!$hero_image){
@@ -176,7 +188,7 @@
   <section id="hero" style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); <?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
       <?php if($hero_caption): ?>
-        <div class="hero-caption">
+        <div class="hero-caption<?php echo $hero_caption_position; ?>">
           <h1><?php echo esc_html($hero_caption); ?></h1>
         </div>
       <?php endif; ?>
