@@ -58,27 +58,28 @@
     </div>
   </section>
 
-  <section id="hardware-options">
-    <div class="container">
-      <div class="options-section">
-        <h2><?php echo esc_html__('Hardware Options', 'eastwood'); ?></h2>
-        <p><?php the_field('hardware_options_section_intro'); ?></p>
-        <?php
-          $hardware_section_note = get_field('hardware_options_section_note');
-          if($hardware_section_note): ?>
-            <p class="light-note"><?php echo esc_html($hardware_section_note); ?></p>
-        <?php endif; ?>
+<?php
+  $custom_options = get_field('hardware_options');
+  $group = 'hardware';
+  if(!empty($custom_options)): ?>
+    <section id="hardware-options">
+      <div class="container">
+        <div class="options-section">
+          <h2><?php echo esc_html__('Hardware Options', 'eastwood'); ?></h2>
+          <p><?php the_field('hardware_options_section_intro'); ?></p>
+          <?php
+            $hardware_section_note = get_field('hardware_options_section_note');
+            if($hardware_section_note): ?>
+              <p class="light-note"><?php echo esc_html($hardware_section_note); ?></p>
+          <?php endif; ?>
 
-        <?php 
-          $custom_options = get_field('hardware_options');
-          $group = 'hardware';
-          if($custom_options){
+          <?php 
             include(locate_template('partials/loop-custom_options.php'));
-          }
-        ?>
+          ?>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+<?php endif; ?>
 
   <section id="have-questions">
     <div class="container">

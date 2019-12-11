@@ -61,39 +61,43 @@ if(!defined('ABSPATH')){ exit; }
                               <?php 
                                 $menu_sub_items = $menu_item['mega_menu_item_links'];
                                 $i = 0; 
-                                foreach($menu_sub_items as $menu_sub_item){
-                                  //set first image
-                                  if($i == 0){
-                                    $first_image = $menu_sub_item['menu_item_image'];
+                                if($menu_sub_items){
+                                  foreach($menu_sub_items as $menu_sub_item){
+                                    //set first image
+                                    if($i == 0){
+                                      $first_image = $menu_sub_item['menu_item_image'];
+                                    }
+
+                                    $sub_item = $menu_sub_item['product_category'];
+                                    if($sub_item){
+                                      $sub_item_title = $sub_item->name;
+                                      $sub_item_slug = $sub_item->slug;
+                                      $sub_item_url = get_term_link($sub_item);
+                                      $sub_item_image = $menu_sub_item['menu_item_image']; 
+
+                                      printf(
+                                        '<a href="%s" id="tab-%s-%s" class="nav-link" data-menu_img_target="menu-img-%s" data-menu_img="%s" data-menu_img_alt="%s">%s</a>',
+                                        esc_url($sub_item_url),
+                                        esc_attr($menu_item_slug),
+                                        esc_attr($sub_item_slug),
+                                        esc_attr($menu_item_slug),
+                                        esc_url($sub_item_image['url']),
+                                        esc_attr($sub_item_image['alt']),
+                                        esc_html($sub_item_title)
+                                      );
+                                    }
+
+                                    $i++;  
                                   }
-
-                                  $sub_item = $menu_sub_item['product_category'];
-                                  if($sub_item){
-                                    $sub_item_title = $sub_item->name;
-                                    $sub_item_slug = $sub_item->slug;
-                                    $sub_item_url = get_term_link($sub_item);
-                                    $sub_item_image = $menu_sub_item['menu_item_image']; 
-
-                                    printf(
-                                      '<a href="%s" id="tab-%s-%s" class="nav-link" data-menu_img_target="menu-img-%s" data-menu_img="%s" data-menu_img_alt="%s">%s</a>',
-                                      esc_url($sub_item_url),
-                                      esc_attr($menu_item_slug),
-                                      esc_attr($sub_item_slug),
-                                      esc_attr($menu_item_slug),
-                                      esc_url($sub_item_image['url']),
-                                      esc_attr($sub_item_image['alt']),
-                                      esc_html($sub_item_title)
-                                    );
-                                  }
-
-                                  $i++;  
                                 }
                               ?>
                             </div>
                           </div>
                           <div class="col-sm-6">
                             <div id="" class="tab-content furniture-sub-content">
+                            <?php if($first_image): ?>
                               <img src="<?php echo esc_url($first_image['url']); ?>" id="menu-img-<?php echo esc_html($menu_item_slug); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($first_image['alt']); ?>" />
+                            <?php endif; ?>
                             </div>
                           </div>
                         </div>
