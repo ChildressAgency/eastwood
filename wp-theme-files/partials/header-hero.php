@@ -107,7 +107,7 @@
         }
       }
 
-      if($cat_id){
+      if(isset($cat_id) && !empty($cat_id)){
         $hero_image = get_field('hero_background_image', 'product_cat_' . $cat_id);
         $hero_image_css = get_field('hero_background_image_css', 'product_cat_' . $cat_id);
 
