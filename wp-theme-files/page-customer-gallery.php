@@ -17,7 +17,7 @@
         $gallery = get_field('customer_gallery');
         if($gallery){
           foreach($gallery as $image){
-            echo '<a href="' . esc_url($image['url']) . '" class="gallery-img" data-lightbox="customer-gallery" title="' . esc_attr($image['title']) . '" style="background-image:url(' . esc_url($image['url']) . ');">';
+            echo '<a href="' . esc_url($image['url']) . '" class="gallery-img" data-lightbox="customer-gallery" title="' . esc_attr($image['title']) . '" data-title="' . esc_attr($image['caption']) . '" style="background-image:url(' . esc_url($image['url']) . ');">';
               //echo '<img src="' . esc_url($image['url']) . '" class="img-fluid d-block" alt="' . esc_attr($image['alt']) . '" />';
               echo '<span class="gallery-img-name">' . esc_html($image['title']) . '</span>';
             echo '</a>';
